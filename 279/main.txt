@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    ios::sync_with_stdio(true); cin.tie(0);
+
+    int hr,min,time;
+    int new_hr=0,new_min=0;
+    cin>>hr>>min>>time;
+    while(time/60 >= 1){
+        new_hr += 1;
+        time -= 60;
+    }
+    new_min = time;
+
+    hr += new_hr;
+    min += new_min;
+    if(min - 60 >= 0){
+        hr += 1;
+        min -= 60;
+    }
+    if(hr-24>=0){
+        hr -= 24;
+    }
+    string str_hr,str_min;
+    if(hr<10){
+        str_hr = "0" + to_string(hr);
+    }else{
+        str_hr = to_string(hr);
+    }
+    if(min<10){
+        str_min = "0" + to_string(min);
+    }else{
+        str_min = to_string(min);
+    }
+    cout<<str_hr<<" "<<str_min<<endl;
+}

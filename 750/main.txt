@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+	ios::sync_with_stdio(false); cin.tie(0);
+	
+	int x,y,result;
+	char ops;
+	cin>>x>>ops>>y;
+	
+	if(ops=='+'){
+		result = x+y;
+	}else if(ops=='-'){
+		result = x-y;
+	}else if(ops=='*'){
+		result = x*y;
+	}else if(ops=='/'){
+		result = x/y;
+	}else{
+		cout<<"???"<<endl;
+	}
+	
+	cout<<result<<endl;
+}
