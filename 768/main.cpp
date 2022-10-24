@@ -3,10 +3,10 @@
 using namespace std;
 
 bool isPrime(long long int x){
-    if(x==1){
+    if(x<=1){
         return 0;
     }
-    for(long long int i=2;i<x;i++){
+    for(long long int i=2;i<sqrt(x);i++){
         if(x%i==0){
             return 0;
         }
