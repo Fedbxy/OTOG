@@ -4,9 +4,9 @@ using namespace std;
 
 int main(){
     ios::sync_with_stdio(false);cin.tie(0);
-    int a,b,gcd,temp;
+    long long int a,b,gcd;
     cin>>a>>b;
-    temp=a*b;
+    long long int temp=a*b;
     while(a*b!=0){
         if(a>b){
             a%=b;
@@ -16,11 +16,9 @@ int main(){
     }
     if(a==0){
         gcd=b;
-    }else if(b==0){
-        gcd=a;
     }else{
-        gcd=0;
+        gcd=a;
     }
-    cout<<(temp/gcd)<<endl;
+    cout<<(temp/gcd)<<"\n";
     return 0;
 }
